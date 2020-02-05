@@ -1,0 +1,38 @@
+﻿// ©GT2_2020
+//Created by #AUTHOR# on #DATE#
+
+using UnityEngine;
+
+namespace TEMP_NAMESPACE
+{
+	public class #SCRIPTNAME# : MonoBehaviour {
+		
+	#region Fields
+	#endregion
+	
+	#region Properties	
+	#endregion
+		
+	#region Methods
+		#region Unity Methods
+		
+		// Use this for internal initialization
+		void Awake () {
+			#NOTRIM#
+		}
+		
+		// Use this for external initialization
+		void Start () {
+			#NOTRIM#
+		}
+		
+		// Update is called once per frame
+		void Update () {
+			#NOTRIM#
+		}
+
+		#endregion
+	#endregion
+		
+	}
+}
