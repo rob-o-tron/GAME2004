@@ -13,13 +13,10 @@ public class SpaceGrid : MonoBehaviour
     private Vector3[,,] _points;
     private Vector2[,,] _uvs;
     private int[,,] _indices;
-    [SerializeField]
-    private int _divisions;
+    public int _divisions;
 
-    [SerializeField]
-    private GameObject _objLines;
-    [SerializeField]
-    private GameObject _objPoints;
+    public GameObject _objLines;
+    public GameObject _objPoints;
     private Renderer _rendLines,_rendPoints;
     private MeshFilter _filtLines, _filtPoints;
     public Material _matLines,_matPoints;

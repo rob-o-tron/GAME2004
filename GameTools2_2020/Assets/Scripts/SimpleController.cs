@@ -15,7 +15,7 @@ public class SimpleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, Input.GetAxis("Vertical") * Time.deltaTime * speed);
+        transform.Translate(0, Input.GetAxis("Elevate") * Time.deltaTime * speed, Input.GetAxis("Vertical") * Time.deltaTime * speed);
 
         transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed, 0);
 
