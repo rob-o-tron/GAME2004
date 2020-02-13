@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/2_Turret.unity
+    guid: 57b458f9cec5e6e45ba2b3ac61b0501d
   m_configObjects: {}

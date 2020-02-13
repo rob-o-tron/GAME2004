@@ -17,6 +17,20 @@ public class LookAtTarget : MonoBehaviour
     void Update()
     {
         //simplest approach:
-        transform.LookAt(lookTarget);
+        //transform.LookAt(lookTarget);
+
+        //quaternion based approach:
+        //(needed for the interpolation animation)
+        Vector3 lookVec = lookTarget.position - transform.position;
+        
+
+        if (horizontalPlaneLock)
+        {
+            lookVec.y = 0.0f;
+        }
+
+        Quaternion lookQuat = Quaternion.LookRotation(lookVec);
+        transform.rotation = Quaternion.Slerp(Quaternion.identity,lookQuat,GameController.interpolator);
+        
     }
 }

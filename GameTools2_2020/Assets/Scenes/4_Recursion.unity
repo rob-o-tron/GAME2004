@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: f0c25056c687d14429cce37873c70b69, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: c2074301a42d2164bb0aa6d39b1c6ac4, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -443,7 +443,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fd8bb1ec608967a4e8b211f64bd23bf2, type: 2}
+  - {fileID: 2100000, guid: 532ca2d810573b540944a39848c936cb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -486,6 +486,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1844594819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844594821}
+  - component: {fileID: 1844594820}
+  m_Layer: 0
+  m_Name: CityManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1844594820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844594819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff2ef46098832f41b22f68401eab01a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshArray:
+  - {fileID: 1846653201744175015, guid: 47da2b13d010b4a42909ec2b7d124826, type: 3}
+  - {fileID: 3673722810935237965, guid: 22d6d4b4b19385b47a24337c40596759, type: 3}
+  - {fileID: -5387877993904369314, guid: 8778eeb1b3de9714f918b05acc176ee6, type: 3}
+  - {fileID: -2001007463727224436, guid: 4af672453f932bc49b933d480bd1632e, type: 3}
+  - {fileID: -2423763149016875186, guid: 90fa51b4101d8444ab7bf854f83fd3e2, type: 3}
+  - {fileID: 8364062792205436496, guid: be57a6ce96267bd48a791b4707db8088, type: 3}
+  - {fileID: 746850768763028875, guid: 2ee8f6fb1637c3441a6f07bdb251ebcf, type: 3}
+  - {fileID: 5924159088411371066, guid: 405f1e75807ad8442bbb85a53c294515, type: 3}
+  - {fileID: 5062246478642505140, guid: 831c4d74625d5774d9b4cd4f9652d18c, type: 3}
+  materialArray:
+  - {fileID: 2100000, guid: b0f6550616fa2fc488ef897ccfd32bd0, type: 2}
+  - {fileID: 2100000, guid: a4447cc3ec4ee5b4995ef78dde43318d, type: 2}
+  - {fileID: 2100000, guid: 9dbedcf2a90f2534da39b8da4e3b61a9, type: 2}
+  - {fileID: 2100000, guid: 30a119decf9aee94297a8cad82ffa4f7, type: 2}
+  - {fileID: 2100000, guid: 6390beb8542519a428ab51037d73c11b, type: 2}
+  - {fileID: 2100000, guid: 3e0189fb2b960094c87a30631420e8af, type: 2}
+  buildingPrefab: {fileID: 4530633928144424731, guid: 6f83489f7a606474d9ebe3a7fe6eba82,
+    type: 3}
+  profileArray:
+  - {fileID: 11400000, guid: 7b8b536d14fb73849ba149cf501eb5a5, type: 2}
+  - {fileID: 11400000, guid: b8d81ba7714ceb64fa7cef57686482cb, type: 2}
+  - {fileID: 11400000, guid: 5ce0d0ec0b203eb4e95bae3454b91752, type: 2}
+  - {fileID: 11400000, guid: 1e18ceacb4be56d448888cc6442b9209, type: 2}
+--- !u!4 &1844594821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844594819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027932578
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +592,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027932578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.70794976, y: 0.7492647, z: -0.266649}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -546,7 +613,7 @@ MonoBehaviour:
   _divisions: 16
   _objLines: {fileID: 8726815850140750571}
   _objPoints: {fileID: 8727514954270520413}
-  _matLines: {fileID: 2100000, guid: c5a2d92b05f4a47459adf787b6c5de94, type: 2}
+  _matLines: {fileID: 2100000, guid: c4d6f11b50dff694bbbc9ed2b6aab647, type: 2}
   _matPoints: {fileID: 2100000, guid: da7113b6c9d752a499b467eff1c695f5, type: 2}
 --- !u!4 &8721498285251403577
 Transform:
@@ -702,7 +769,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c5a2d92b05f4a47459adf787b6c5de94, type: 2}
+  - {fileID: 2100000, guid: c4d6f11b50dff694bbbc9ed2b6aab647, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
