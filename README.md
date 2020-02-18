@@ -18,6 +18,21 @@
 - Ferrone, Harrison (2019) Learning C# by Developing Games with Unity 2019, 4th Ed., Packt Publishing
 - Buckland, Mat (2005) Programming Game AI by Example, Worldware Publishing Inc
 
+
+# Week 3
+
+## Learning Objectives:
+- Version Control Systems: basics of working with Git repositories
+- Lab Exercise 1: City Planning Array - implementing a simple model of the game world using an array
+
+## Student repository link form
+- [Submit the link to your repo HERE](https://drive.google.com/open?id=1sSTz-TfBnZftcxyHBLLwOCG4eU6JbZKoR6maeWltpsk)
+
+
+## Lecture Slides
+- [C# Coding, continued](https://drive.google.com/open?id=1IIwSspA76i0LWBtoFDXmn1pCZH9uv3IK)
+
+
 # Week 2
 
 ## Lecture Slides
