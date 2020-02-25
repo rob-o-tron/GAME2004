@@ -7,7 +7,7 @@
 ## Contact
 * Email: robbogucki@gmail.com
 
-## CHANGE
+## Resources
 
 #### Unity/C# Scripting:
 - [Unity User Manual](https://docs.unity3d.com/Manual/index.html)
@@ -40,6 +40,11 @@
 ## Lecture Slides
 - [C# Coding, continued](https://drive.google.com/open?id=1IIwSspA76i0LWBtoFDXmn1pCZH9uv3IK)
 
+
+# Week 2
+
+## Lecture Slides
+- [C# Scripting](https://drive.google.com/open?id=1U8Hf1XGZqcuL0iyY4cU58LnDzW_UJQoW)
 
 
 
