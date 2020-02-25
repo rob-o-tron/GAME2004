@@ -50,14 +50,25 @@ namespace GRIDCITY
         // Use this for external initialization
         void Start()
         {
+            int x = Mathf.RoundToInt(transform.position.x+5.0f);
+            int y = Mathf.RoundToInt(transform.position.y);
+            int z = Mathf.RoundToInt(transform.position.z+5.0f);
             cityManager = CityManager.Instance;
             Transform child;
             if (recursionLevel==0)
             {
-                int meshNum = myProfile.groundBlocks.Length;
-                int matNum = myProfile.groundMaterials.Length;
-                myMesh=myProfile.groundBlocks[Random.Range(0, meshNum)];
-                myMaterial = myProfile.groundMaterials[Random.Range(0, matNum)];
+                if (!cityManager.CheckSlot(x,y,z))
+                {
+                    int meshNum = myProfile.groundBlocks.Length;
+                    int matNum = myProfile.groundMaterials.Length;
+                    myMesh=myProfile.groundBlocks[Random.Range(0, meshNum)];
+                    myMaterial = myProfile.groundMaterials[Random.Range(0, matNum)];
+                    cityManager.SetSlot(x, y, z, true);
+                }
+                else
+                {
+                    Destroy(this);
+                }
             }
 
             myMeshFilter.mesh = myMesh;
@@ -67,17 +78,27 @@ namespace GRIDCITY
             {
                 if (recursionLevel == maxLevel-1)
                 {
-                    child = Instantiate(basePrefab, transform.position + Vector3.up, Quaternion.identity, this.transform);
-                    int meshNum = myProfile.roofBlocks.Length;
-                    int matNum = myProfile.roofMaterials.Length;
-                    child.GetComponent<DeluxeTowerBlock>().Initialize(recursionLevel + 1, myProfile.roofMaterials[Random.Range(0, matNum)], myProfile.roofBlocks[Random.Range(0, meshNum)]);
+                    if (!cityManager.CheckSlot(x, y + 1, z))
+                    {
+                        child = Instantiate(basePrefab, transform.position + Vector3.up, Quaternion.identity, this.transform);
+                        int meshNum = myProfile.roofBlocks.Length;
+                        int matNum = myProfile.roofMaterials.Length;
+                        child.GetComponent<DeluxeTowerBlock>().Initialize(recursionLevel + 1, myProfile.roofMaterials[Random.Range(0, matNum)], myProfile.roofBlocks[Random.Range(0, meshNum)]);
+
+                        cityManager.SetSlot(x, y + 1, z, true);
+                    }
                 }
                 else
                 {
-                    child = Instantiate(basePrefab, transform.position + Vector3.up, Quaternion.identity, this.transform);
-                    int meshNum = myProfile.mainBlocks.Length;
-                    int matNum = myProfile.mainMaterials.Length;
-                    child.GetComponent<DeluxeTowerBlock>().Initialize(recursionLevel + 1, myProfile.mainMaterials[Random.Range(0, matNum)], myProfile.mainBlocks[Random.Range(0, meshNum)]);
+                    if (!cityManager.CheckSlot(x, y + 1, z))
+                    {
+                        child = Instantiate(basePrefab, transform.position + Vector3.up, Quaternion.identity, this.transform);
+                        int meshNum = myProfile.mainBlocks.Length;
+                        int matNum = myProfile.mainMaterials.Length;
+                        child.GetComponent<DeluxeTowerBlock>().Initialize(recursionLevel + 1, myProfile.mainMaterials[Random.Range(0, matNum)], myProfile.mainBlocks[Random.Range(0, meshNum)]);
+
+                        cityManager.SetSlot(x, y + 1, z, true);
+                    }
                 }
             }
         }
@@ -85,7 +106,10 @@ namespace GRIDCITY
         // Update is called once per frame
         void Update()
         {
-
+            if (transform.position.y < -5f)
+            {
+                Destroy(gameObject);
+            }
         }
 
         #endregion

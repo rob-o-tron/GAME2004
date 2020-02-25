@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GradientSkybox1 1
-  m_Shader: {fileID: 4800000, guid: 437f500fe6bd42c4594e97d8d20a19e6, type: 3}
-  m_ShaderKeywords: SUN
+  m_Name: SpaceGridLines 2
+  m_Shader: {fileID: 4800000, guid: 481634ed411a2fb4b8b956e48f707554, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -59,33 +59,25 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Dither: 0
     - _DstBlend: 0
-    - _ExponentB: 3.06
-    - _ExponentT: 2.78
+    - _Frequency: 25
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Intensity: 1
+    - _MaxDist: 8.9
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Opacity: 1
     - _Parallax: 0.02
+    - _Pulse: 3.9
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 0
     - _SrcBlend: 1
-    - _Sun: 1
-    - _SunAltitude: -4
-    - _SunAzimuth: 20
-    - _SunIntensity: 0
-    - _SunSize: 0.3
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorB: {r: 0.08383918, g: 0, b: 0.254717, a: 1}
-    - _ColorM: {r: 0.32197633, g: 0.16470587, b: 1, a: 1}
-    - _ColorT: {r: 1, g: 0.6659591, b: 0, a: 1}
+    - _Color2: {r: 0, g: 0.08090782, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SunColor: {r: 1, g: 0.9882353, b: 0.87058824, a: 1}
-    - _SunVector: {r: 1, g: 0, b: 0, a: 0}

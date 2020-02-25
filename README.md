@@ -18,6 +18,14 @@
 - Ferrone, Harrison (2019) Learning C# by Developing Games with Unity 2019, 4th Ed., Packt Publishing
 - Buckland, Mat (2005) Programming Game AI by Example, Worldware Publishing Inc
 
+# Week 4
+
+## Learning Objectives:
+- Unity Physics: physical simulation background and Unity integration, practical exercises
+
+## Lecture Slides
+- [Unity Physics](https://drive.google.com/open?id=1gM5J7J5QPR5_Cgas2LuNchiCmcLG8n7I)
+
 
 # Week 3
 
