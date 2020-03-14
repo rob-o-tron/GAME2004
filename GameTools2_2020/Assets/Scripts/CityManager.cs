@@ -13,9 +13,13 @@ namespace GRIDCITY
         private static CityManager _instance;
         public Mesh[] meshArray;
         public Material[] materialArray;
-        public Transform buildingPrefab;
+        public GameObject buildingPrefab;
+        public GameObject treePrefab;
         public BuildingProfile[] profileArray;
-        private bool[,,] cityArray = new bool [11,11,11];
+
+        public BuildingProfile wallProfile;
+
+        private bool[,,] cityArray = new bool [15,15,15];   //increased array size to allow for larger city volume
 
         public static CityManager Instance
         {
@@ -47,27 +51,52 @@ namespace GRIDCITY
         }
 		
 		// Use this for external initialization
-		void Start () {
+		void Start ()
+        {
+            //UPDATING PLANNING ARRAY TO ACCOUNT FOR MANUALLY PLACED|CITY GATE
+            for (int ix=-1; ix <2; ix++)
+            {
+                int iz = -7;
+                for (int iy=0;iy<3;iy++)
+                {
+                    SetSlot(ix + 7, iy, iz + 7, true);
+                }
+            }
+
+            //BUILD CITY WALLS - add your code below
+            
+            for (int i=-7 ; i < 8 ; i += 14)
+            {
+                for (int j = -7; j < 8; j += 1)
+                {
+                    Instantiate(buildingPrefab, new Vector3(i, 0.05f, j), Quaternion.identity).GetComponent<DeluxeTowerBlock>().SetProfile(wallProfile);
+                }
+                for (int j = -6; j < 7; j += 1)
+                {
+                    Instantiate(buildingPrefab, new Vector3(j, 0.05f, i), Quaternion.identity).GetComponent<DeluxeTowerBlock>().SetProfile(wallProfile);
+                }
+            }
+            
+
+            //CITY BUILDINGS:
+            
 			for (int i=-4;i<5;i+=2)
             {
                 for (int j=-4;j<5;j+=2)
                 {
                     int random = Random.Range(0, profileArray.Length);
-                    Instantiate(buildingPrefab, new Vector3(i, 0.0f, j), Quaternion.identity).GetComponent<DeluxeTowerBlock>().SetProfile(profileArray[random]);                 
+                    Instantiate(buildingPrefab, new Vector3(i, 0.05f, j), Quaternion.identity).GetComponent<DeluxeTowerBlock>().SetProfile(profileArray[random]);                 
                 }
             }
+            
+            
 		}
 		
-		// Update is called once per frame
-		void Update () {
-			
-		}
-
 		#endregion
 
         public bool CheckSlot(int x, int y, int z)
         {
-            if (x < 0 || x > 10 || y < 0 || y > 10 || z < 0 || z > 10) return true;
+            if (x < 0 || x > 14 || y < 0 || y > 14 || z < 0 || z > 14) return true;
             else
             {
                 return cityArray[x, y, z];
@@ -77,7 +106,7 @@ namespace GRIDCITY
 
         public void SetSlot(int x, int y, int z, bool occupied)
         {
-            if (!(x < 0 || x > 10 || y < 0 || y > 10 || z < 0 || z > 10))
+            if (!(x < 0 || x > 14 || y < 0 || y > 14 || z < 0 || z > 14))
             {
                 cityArray[x, y, z] = occupied;
             }

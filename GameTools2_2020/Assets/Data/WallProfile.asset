@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919ae90b60151e4438eaa95b83d3f81c, type: 3}
+  m_Name: WallProfile
+  m_EditorClassIdentifier: 
+  groundBlocks:
+  - {fileID: 1846653201744175015, guid: 47da2b13d010b4a42909ec2b7d124826, type: 3}
+  mainBlocks:
+  - {fileID: 1846653201744175015, guid: 47da2b13d010b4a42909ec2b7d124826, type: 3}
+  altBlocks:
+  - {fileID: 1846653201744175015, guid: 47da2b13d010b4a42909ec2b7d124826, type: 3}
+  roofBlocks:
+  - {fileID: 3673722810935237965, guid: 22d6d4b4b19385b47a24337c40596759, type: 3}
+  groundMaterials:
+  - {fileID: 2100000, guid: dddfc0e1d146ddc49b5e37d53b0f6f7f, type: 2}
+  mainMaterials:
+  - {fileID: 2100000, guid: dddfc0e1d146ddc49b5e37d53b0f6f7f, type: 2}
+  roofMaterials:
+  - {fileID: 2100000, guid: dddfc0e1d146ddc49b5e37d53b0f6f7f, type: 2}
+  maxHeight: 2

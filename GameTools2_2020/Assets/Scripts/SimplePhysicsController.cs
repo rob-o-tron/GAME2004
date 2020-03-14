@@ -11,6 +11,9 @@ public class SimplePhysicsController : MonoBehaviour
 
     private Rigidbody rb;
 
+    public GameObject nuke;
+    private bool nuked = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,17 @@ public class SimplePhysicsController : MonoBehaviour
         vInput = Input.GetAxis("Vertical") * speed;
         hInput = Input.GetAxis("Horizontal") * rotSpeed;
         eInput = -Input.GetAxis("Elevate") * rotSpeed;
+
+        if (transform.position.magnitude>20)
+        {
+            if (!nuked)
+            {
+                Instantiate(nuke, Vector3.zero, Quaternion.identity);
+                nuked = true;
+            }
+
+        }
+
     }
 
     private void FixedUpdate()
