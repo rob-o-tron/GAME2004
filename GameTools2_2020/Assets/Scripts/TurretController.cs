@@ -10,6 +10,8 @@ public class TurretController : MonoBehaviour
     public Transform domeXform;
     public Transform aimTarget;
     public GameObject bulletPrefab;
+    public float gunInterval = 0.1f;
+    private float gunTimer = 0.0f;
 
     public LayerMask raycastMask;
 
@@ -23,6 +25,8 @@ public class TurretController : MonoBehaviour
 
     private void Update()
     {
+        gunTimer -= Time.deltaTime;
+
         if (alerted)
         {
             interpolator = Mathf.Lerp(interpolator, 1.0f, 0.1f);
@@ -31,8 +35,12 @@ public class TurretController : MonoBehaviour
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(gunXform.position, gunXform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, raycastMask))
             {
-                if (hit.collider.gameObject.tag=="Player")
-                Instantiate(bulletPrefab, gunXform.position, Quaternion.identity);
+                if ((hit.collider.gameObject.tag=="Player")&&(gunTimer<0.0f))
+                {
+                    Instantiate(bulletPrefab, gunXform.position, Quaternion.identity);
+                    gunTimer = gunInterval;
+                }
+
             }
         }
         else
