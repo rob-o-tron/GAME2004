@@ -1,11 +1,13 @@
 # GAME2004 Game Tools II 2020
 
+## ONLINE LECTURE
+- The lectures will be delivered online via the TU984 Discord for the time being. 
+
 ## Resources
-- [Class Facebook page](https://www.facebook.com/groups/2895869543768121)
 - [Course Notes](https://drive.google.com/open?id=1zyDfgHkcRRDofioTPWzugJl4dyVEBFIK)
 
 ## Contact
-* Email: robbogucki@gmail.com
+* Email: robbogucki@gmail.com / rob.bogucki@tudublin.ie
 
 ## Resources
 
@@ -13,10 +15,27 @@
 - [Unity User Manual](https://docs.unity3d.com/Manual/index.html)
 - [Unity Scripting Reference](https://docs.unity3d.com/ScriptReference/index.html)
 - [Catlike Coding](https://catlikecoding.com/unity/tutorials/)
+- [C# for loop tutorial](https://www.tutorialsteacher.com/csharp/csharp-for-loop)
+- [another C# for loop tutorial](https://www.programiz.com/csharp-programming/for-loop)
+
 
 ## Reading
 - Ferrone, Harrison (2019) Learning C# by Developing Games with Unity 2019, 4th Ed., Packt Publishing
 - Buckland, Mat (2005) Programming Game AI by Example, Worldware Publishing Inc
+
+# Week 6 
+
+## Learning Objectives:
+- Unity Physics continued: collider triggers, layers, raycasting - practical exercises
+
+## Lecture Slides
+- [Unity Physics ctd.](https://drive.google.com/open?id=11r1gMmTOhBr9vp_ysd6-XZCtjRao4494)
+
+# Week 5 - Lab Test 1
+
+## Lab Test 1 solution
+The complete solution to the lab test problems was added to the project in this repository. 
+Open the 7_LabTest1_COMPLETED.unity scene.
 
 # Week 4
 
