@@ -28,6 +28,10 @@
 ## Learning Objectives:
 - Unity Physics continued: collider triggers, layers, raycasting - practical exercises
 
+## Lecture Videos
+- [Part I](https://youtu.be/Ud9mNRj8zIs)
+- [Part II](https://youtu.be/hoCkcMobmf0)
+
 ## Lecture Slides
 - [Unity Physics ctd.](https://drive.google.com/open?id=11r1gMmTOhBr9vp_ysd6-XZCtjRao4494)
 
