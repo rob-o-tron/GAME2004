@@ -23,6 +23,14 @@
 - Ferrone, Harrison (2019) Learning C# by Developing Games with Unity 2019, 4th Ed., Packt Publishing
 - Buckland, Mat (2005) Programming Game AI by Example, Worldware Publishing Inc
 
+# Week 7
+
+## "Coding Games"
+- exploring visual programming, creative coding exercises, gamified coding practice
+
+## Lecture Slides
+- ["Coding Games"] (https://drive.google.com/open?id=1Dx9D2oO_037fign4brBK4slYWSZoqCR1)
+
 # Week 6 
 
 ## Learning Objectives:
