@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8200917555860579616}
   - component: {fileID: 9176510953282187120}
   - component: {fileID: -6376633983818362512}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: HostileBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}

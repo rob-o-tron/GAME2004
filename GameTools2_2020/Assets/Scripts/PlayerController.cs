@@ -10,12 +10,13 @@ public class PlayerController : MonoBehaviour
     private float eInput;
 
     private Rigidbody rb;
-
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public float speed = 5.0f;
@@ -42,6 +43,15 @@ public class PlayerController : MonoBehaviour
             Quaternion yawRot = Quaternion.AngleAxis(hInput * Time.fixedDeltaTime,Vector3.up);
             rb.MoveRotation(rb.rotation*yawRot);
 
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer==11)
+        {
+            Destroy(other.gameObject);
+            audioSource.Play();
         }
     }
 
