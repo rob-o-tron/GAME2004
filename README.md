@@ -29,7 +29,7 @@
 - exploring visual programming, creative coding exercises, gamified coding practice
 
 ## Lecture Slides
-- ["Coding Games"] (https://drive.google.com/open?id=1Dx9D2oO_037fign4brBK4slYWSZoqCR1)
+- ["Coding Games"](https://drive.google.com/open?id=1Dx9D2oO_037fign4brBK4slYWSZoqCR1)
 
 # Week 6 
 
