@@ -49,12 +49,19 @@ namespace GRIDCITY
 		void Start ()
         {
             //UPDATING PLANNING ARRAY TO ACCOUNT FOR TURRET
+            for (int i = -3; i < 4; i += 1)
+            {
+                for (int j = -3; j < 4; j += 1)
+                {
+                    SetSlot(i+7,0,j+7,true); 
+                }
+            }
 
 
             //CITY BUILDINGS
             for (int i=-7;i<8;i+=3)
             {
-                for (int j=-7;j<8;j+=3)
+                for (int j=-7; j<8 ;j+=3)
                 {
                     int random = Random.Range(0, profileArray.Length);
                     Instantiate(buildingPrefab, new Vector3(i, 0.05f, j), Quaternion.identity).GetComponent<HostileTowerBlock>().SetProfile(profileArray[random]);                 

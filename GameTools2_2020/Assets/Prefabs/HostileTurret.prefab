@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8739847160529579705}
+  - component: {fileID: 514044834}
+  - component: {fileID: 514044835}
   m_Layer: 9
   m_Name: HostileTurret
   m_TagString: Untagged
@@ -37,6 +39,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &514044834
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834312515341980940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 7
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &514044835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834312515341980940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1566e215f8aff914dab0f854436ad415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alerted: 0
+  lookTarget: {fileID: 0}
+  gunXform: {fileID: 1926324754847107284}
+  domeXform: {fileID: 1926324756732955345}
+  turretSpeedOn: 0.1
+  turretSpeedOff: 0.05
+  bulletPrefab: {fileID: 4757397489136909334, guid: 4f264c3761f7c7848947cc20a46f4bce,
+    type: 3}
 --- !u!64 &3504655157322212933
 MeshCollider:
   m_ObjectHideFlags: 0
