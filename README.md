@@ -32,7 +32,7 @@
 ## Lecture Videos
 - [Part I](https://youtu.be/SxAr7z800gY)
 - [Part II](https://youtu.be/8fdD8Wn8wv8)
-- [Part III - additional livecoding](https://youtu.be/wf2hvuK2Uu8)
+- [Part III - additional livecoding](https://youtu.be/XigqdAfVt_M)
 
 ## Lecture Slides
 - ["Coding Games"](https://drive.google.com/open?id=1Dx9D2oO_037fign4brBK4slYWSZoqCR1)
