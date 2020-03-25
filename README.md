@@ -1,15 +1,16 @@
 # GAME2004 Game Tools II 2020
 
-## ONLINE LECTURE
-- The lectures will be delivered online via the TU984 Discord for the time being. 
-
-## Resources
-- [Course Notes](https://drive.google.com/open?id=1zyDfgHkcRRDofioTPWzugJl4dyVEBFIK)
-
 ## Contact
 * Email: robbogucki@gmail.com / rob.bogucki@tudublin.ie
 
+## ONLINE LECTURE
+- The lectures will be delivered online via the TU984 Discord for the time being. 
+
+## Final Project
+- [Project Brief](https://drive.google.com/open?id=1-92K9HQPE5HhxVSYHcNwUxniUWW5Kp6v)
+
 ## Resources
+- [Course Notes](https://drive.google.com/open?id=1zyDfgHkcRRDofioTPWzugJl4dyVEBFIK)
 
 #### Unity/C# Scripting:
 - [Unity User Manual](https://docs.unity3d.com/Manual/index.html)
