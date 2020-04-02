@@ -27,6 +27,7 @@
 # Week 8
 
 ## Animation
+- [Unity project - completed lesson](https://github.com/rob-o-tron/AnimationProject)
 
 ## Lecture Video
 - [Animation lecture](https://youtu.be/G8s9rnH_8vo)
