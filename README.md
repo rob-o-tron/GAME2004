@@ -28,6 +28,9 @@
 
 ## Animation
 
+## Lecture Video
+- [Animation lecture](https://youtu.be/G8s9rnH_8vo)
+
 ## Assets:
 - [Unitypackage with animations](https://drive.google.com/open?id=1iv6Pa4IT1ZcN2vzWdWCvgVj-gN9F4oAS)
 
