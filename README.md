@@ -24,6 +24,16 @@
 - Ferrone, Harrison (2019) Learning C# by Developing Games with Unity 2019, 4th Ed., Packt Publishing
 - Buckland, Mat (2005) Programming Game AI by Example, Worldware Publishing Inc
 
+# Week 9
+
+## AI - Navigation. Learning Objectives:
+- Unity AI:Navigation
+- NavMeshes: NPC pathfinding and obstacle avoidance
+- NavMeshComponents for procedural level NavMesh realtime baking
+
+## Lecture Slides
+- ["AI: Navigation"](https://drive.google.com/open?id=114y3rta3tNDM56ZflBrWaCtF8NUs5Y47)
+
 # Week 8
 
 ## Animation
