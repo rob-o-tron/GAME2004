@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace GRIDCITY
 {
@@ -88,8 +89,7 @@ namespace GRIDCITY
                     Instantiate(buildingPrefab, new Vector3(i, 0.05f, j), Quaternion.identity).GetComponent<DeluxeTowerBlock>().SetProfile(profileArray[random]);                 
                 }
             }
-            
-            
+
 		}
 		
 		#endregion
