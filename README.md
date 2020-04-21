@@ -11,6 +11,8 @@
 
 ## Turtle Art results
 ![Class poster](Poster.jpg)
+- [Results image](PosterResults.jpg)
+- [Hi-res poster](Poster.png)
 
 ## Resources
 - [Course Notes](https://drive.google.com/open?id=1zyDfgHkcRRDofioTPWzugJl4dyVEBFIK)
