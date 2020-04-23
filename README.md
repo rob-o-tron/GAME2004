@@ -36,6 +36,11 @@
 - NavMeshes: NPC pathfinding and obstacle avoidance
 - NavMeshComponents for procedural level NavMesh realtime baking
 
+## Lecture Videos
+- [Part I](https://youtu.be/yP4strMCji4)
+- [Part II](https://youtu.be/tdDhqKpFTzA)
+- [Part III - additional livecoding](https://youtu.be/8m9EtGbzY5s)
+
 ## Lecture Slides
 - ["AI: Navigation"](https://drive.google.com/open?id=114y3rta3tNDM56ZflBrWaCtF8NUs5Y47)
 
