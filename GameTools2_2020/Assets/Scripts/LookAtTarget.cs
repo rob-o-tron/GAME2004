@@ -30,7 +30,7 @@ public class LookAtTarget : MonoBehaviour
         }
 
         Quaternion lookQuat = Quaternion.LookRotation(lookVec);
-        transform.rotation = Quaternion.Slerp(Quaternion.identity,lookQuat,GameController.interpolator);
+        transform.rotation = lookQuat;
         
     }
 }

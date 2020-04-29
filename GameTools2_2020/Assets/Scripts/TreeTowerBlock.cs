@@ -12,7 +12,7 @@ namespace GRIDCITY
         private GameObject treePrefab;
         public int recursionLevel = -1;
         private int maxLevel = 3;
-        private CityManager cityManager;
+        private GridCityManager cityManager;
         private Renderer myRenderer;
         private MeshFilter myMeshFilter;
         private Mesh myMesh;
@@ -55,7 +55,7 @@ namespace GRIDCITY
             int x = Mathf.RoundToInt(transform.position.x + 7.0f);
             int y = Mathf.RoundToInt(transform.position.y);
             int z = Mathf.RoundToInt(transform.position.z + 7.0f);
-            cityManager = CityManager.Instance;
+            cityManager = GridCityManager.Instance;
             treePrefab = cityManager.treePrefab;
             GameObject child;
             if (recursionLevel == 0)                     //initial foundation block

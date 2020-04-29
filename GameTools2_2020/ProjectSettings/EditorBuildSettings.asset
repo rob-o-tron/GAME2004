@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/2_Turret.unity
-    guid: 57b458f9cec5e6e45ba2b3ac61b0501d
+    path: Assets/Scenes/GridCity.unity
+    guid: f6920930006cc3341a05602a8be5b799
   m_configObjects: {}

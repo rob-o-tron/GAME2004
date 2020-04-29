@@ -5,7 +5,6 @@ public class BuildingProfile : ScriptableObject
 {
     public Mesh[] groundBlocks;
     public Mesh[] mainBlocks;
-    public Mesh[] altBlocks;
     public Mesh[] roofBlocks;
 
     public Material[] groundMaterials;

@@ -18,10 +18,13 @@ namespace GRIDCITY
         private Transform slopeDownPrefab;
 
         private int maxLevel = 100;
-        private NavigationCityManager navCityManager;
+        private GridCityManager cityManager;
+        private GameController gameController;
 
         private int inc_x, inc_y, inc_z;
-
+        //helper flags for edge cases
+        private bool baddieSpawned = false;
+        private bool targetSpawned = false;
 
         #endregion
 
@@ -73,11 +76,50 @@ namespace GRIDCITY
         void Awake()
         {
             inc_x = inc_y = inc_z = 0;
+            cityManager = GridCityManager.Instance;
+            gameController = GameController.Instance;
         }
 
         private void Update()
         {
+            if ((cityManager.navMeshReady) && (mySlope == 0) && gameController.gameState!=GameController.GameState.Game)
+            {
+                int rando = Random.Range(0, 1000);
+                if (rando < 5)
+                {
+                    Instantiate(cityManager.agentPrefab, this.transform);
+                }
+            }
 
+            if (gameController.gameState==GameController.GameState.Game)
+            {
+                if ((cityManager.navMeshReady)&&(GameController.baddiesNeeded)&&(!baddieSpawned)&&(mySlope==0))
+                {
+                    if ((transform.position-cityManager.startLocation.position).magnitude>5f)
+                    {
+                        int rando = Random.Range(0, 1000);
+                        if (rando < 5)
+                        {
+                            Instantiate(gameController.baddiePrefab, transform.position, Quaternion.identity, gameController.dummyPivot);
+                            baddieSpawned = true;
+                        }
+                    }
+                }
+
+                if ((GameController.patrolTargetsNeeded) && (!targetSpawned) && (mySlope == 0))
+                {
+                    if ((transform.position - cityManager.startLocation.position).magnitude > 3f)
+                    {
+                        int rando = Random.Range(0, 1000);
+                        if (rando < 5)
+                        {
+                            Transform target = Instantiate(gameController.targetPrefab, transform.position, Quaternion.identity, gameController.dummyPivot);
+                            gameController.RegisterPatrolTarget(target);
+                            targetSpawned = true;
+                        }
+                    }
+                }
+            }
         }
 
         // Use this for external initialization
@@ -90,10 +132,10 @@ namespace GRIDCITY
 
             int z = Mathf.RoundToInt(transform.position.z + 20.0f);
 
-            navCityManager = NavigationCityManager.Instance;
-            tilePrefab = navCityManager.tilePrefab;
-            slopeUpPrefab = navCityManager.slopeUpPrefab;
-            slopeDownPrefab = navCityManager.slopeDownPrefab;
+            cityManager = GridCityManager.Instance;
+            tilePrefab = cityManager.tilePrefab;
+            slopeUpPrefab = cityManager.slopeUpPrefab;
+            slopeDownPrefab = cityManager.slopeDownPrefab;
 
             Transform child;
 
@@ -106,9 +148,9 @@ namespace GRIDCITY
                     Vector3 incVector = Vector3.right * inc_x + Vector3.up * inc_y + Vector3.forward * inc_z;
                     Quaternion nextQuat = Quaternion.Euler(0f, nextRotation, 0f);
 
-                    if (!navCityManager.CheckSlot(x+inc_x, y+inc_y, z+inc_z))
+                    if (!cityManager.CheckSlot(x+inc_x, y+inc_y, z+inc_z))
                     {
-                        navCityManager.SetSlot(x + inc_x, y + inc_y, z + inc_z,true);
+                        cityManager.SetSlot(x + inc_x, y + inc_y, z + inc_z,true);
                         child = Instantiate(tilePrefab, transform.position + incVector , nextQuat);
                         child.parent = this.transform;
                         child.GetComponent<RouteTile>().Initialize(recursionCount + 1,0, nextRotation);
@@ -122,6 +164,10 @@ namespace GRIDCITY
             }
             else if (recursionCount < maxLevel)
             {
+                if (mySlope==0)
+                {
+                    Instantiate(gameController.pointPrefab, transform.position, Quaternion.identity, gameController.dummyPivot);
+                }
                 int corrector = (maxLevel-recursionCount) / 15;  //biasing randomization in the beginning to avoid extinction
                 int random = Random.Range(0, 100);
                 if (random<(80+corrector))                //move forward (most likely):
@@ -136,17 +182,15 @@ namespace GRIDCITY
                         Vector3 incVector = Vector3.right * inc_x + Vector3.up * inc_y + Vector3.forward * inc_z;
                         Quaternion nextQuat = Quaternion.Euler(0f, nextRotation, 0f);
 
-                        if (!navCityManager.CheckSlot(x + inc_x, y + inc_y, z + inc_z))
-                        {
-                            navCityManager.SetSlot(x + inc_x, y + inc_y, z + inc_z, true);
+                        if ((!cityManager.CheckSlot(x + inc_x, y, z + inc_z)) && (!cityManager.CheckSlot(x + inc_x, y + 1, z + inc_z)))
+                            {
+                            cityManager.SetSlot(x + inc_x, y, z + inc_z, true);
+                            cityManager.SetSlot(x + inc_x, y + 1, z + inc_z, true);
                             child = Instantiate(slopeUpPrefab, transform.position + incVector, nextQuat);
                             child.parent = this.transform;
                             child.GetComponent<RouteTile>().Initialize(recursionCount + 1, 1, nextRotation);
                         }
-                        else
-                        {
-                            GameObject.Destroy(gameObject);
-                        }
+
                     }
                     else if ((random <20)&&(mySlope==0)) //going down
                     {
@@ -155,17 +199,15 @@ namespace GRIDCITY
                         Vector3 incVector = Vector3.right * inc_x + Vector3.up * inc_y + Vector3.forward * inc_z;
                         Quaternion nextQuat = Quaternion.Euler(0f, nextRotation, 0f);
 
-                        if (!navCityManager.CheckSlot(x + inc_x, y + inc_y, z + inc_z))
+                        if ((!cityManager.CheckSlot(x + inc_x, y, z + inc_z))&& (!cityManager.CheckSlot(x + inc_x, y-1, z + inc_z)))
                         {
-                            navCityManager.SetSlot(x + inc_x, y + inc_y, z + inc_z, true);
+                            cityManager.SetSlot(x + inc_x, y , z + inc_z, true);
+                            cityManager.SetSlot(x + inc_x, y - 1, z + inc_z, true);
                             child = Instantiate(slopeDownPrefab, transform.position + incVector, nextQuat);
                             child.parent = this.transform;
                             child.GetComponent<RouteTile>().Initialize(recursionCount + 1, -1, nextRotation);
                         }
-                        else
-                        {
-                            GameObject.Destroy(gameObject);
-                        }
+
                     }
                     else //flat path
                     {
@@ -173,18 +215,28 @@ namespace GRIDCITY
 
                         Vector3 incVector = Vector3.right * inc_x + Vector3.up * inc_y + Vector3.forward * inc_z;
                         Quaternion nextQuat = Quaternion.Euler(0f, nextRotation, 0f);
-
-                        if (!navCityManager.CheckSlot(x + inc_x, y + inc_y, z + inc_z))
+                        if (mySlope==-1)
                         {
-                            navCityManager.SetSlot(x + inc_x, y + inc_y, z + inc_z, true);
-                            child = Instantiate(tilePrefab, transform.position + incVector, nextQuat);
-                            child.parent = this.transform;
-                            child.GetComponent<RouteTile>().Initialize(recursionCount + 1, 0, nextRotation);
+                            if (!cityManager.CheckSlot(x + inc_x, y + inc_y + 1, z + inc_z))
+                            {
+                                cityManager.SetSlot(x + inc_x, y + inc_y + 1, z + inc_z, true);
+                                child = Instantiate(tilePrefab, transform.position + incVector, nextQuat);
+                                child.parent = this.transform;
+                                child.GetComponent<RouteTile>().Initialize(recursionCount + 1, 0, nextRotation);
+                            }
                         }
                         else
                         {
-                            GameObject.Destroy(gameObject);
+                            if (!cityManager.CheckSlot(x + inc_x, y + inc_y, z + inc_z))
+                            {
+                                cityManager.SetSlot(x + inc_x, y + inc_y, z + inc_z, true);
+                                child = Instantiate(tilePrefab, transform.position + incVector, nextQuat);
+                                child.parent = this.transform;
+                                child.GetComponent<RouteTile>().Initialize(recursionCount + 1, 0, nextRotation);
+                            }
                         }
+
+
                     }
                 }
                 //end move forward
@@ -207,17 +259,14 @@ namespace GRIDCITY
                     Vector3 incVector = Vector3.right * inc_x + Vector3.up * inc_y + Vector3.forward * inc_z;
                     Quaternion nextQuat = Quaternion.Euler(0f, nextRotation, 0f);
 
-                    if (!navCityManager.CheckSlot(x + inc_x, y + inc_y, z + inc_z))
+                    if (!cityManager.CheckSlot(x + inc_x, y + inc_y, z + inc_z))
                     {
-                        navCityManager.SetSlot(x + inc_x, y + inc_y, z + inc_z, true);
+                        cityManager.SetSlot(x + inc_x, y + inc_y, z + inc_z, true);
                         child = Instantiate(tilePrefab, transform.position + incVector, nextQuat);
                         child.parent = this.transform;
                         child.GetComponent<RouteTile>().Initialize(recursionCount + 1, 0, nextRotation);
                     }
-                    else
-                    {
-                        GameObject.Destroy(gameObject);
-                    }
+
                 }
 
             }
