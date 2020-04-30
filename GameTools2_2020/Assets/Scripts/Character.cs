@@ -76,7 +76,7 @@ namespace GRIDCITY
                 bodyTransform.rotation = Quaternion.Lerp(bodyTransform.rotation, targetRotation, 0.5f);
                 playerAgent.destination = bodyTransform.position + moveVec;
             }
-
+            
 
 
             else if ((GameController.Instance.gameState == GameController.GameState.GameOver)&&(finished==false))
