@@ -211,7 +211,7 @@ namespace GRIDCITY
             playerLoot = 0;
             baddiesRegistered = 0;
             patrolLocations.Clear();
-
+            patrolTargetsNeeded = true;
             cityManager.SetNavMeshReadyFlag(false);
             audioMaster.Reset();
 

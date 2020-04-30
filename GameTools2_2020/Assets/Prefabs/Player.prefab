@@ -348,7 +348,7 @@ CapsuleCollider:
   m_Radius: 1
   m_Height: 2.4
   m_Direction: 1
-  m_Center: {x: 0, y: 0.76, z: 0}
+  m_Center: {x: 0, y: 1.21, z: 0}
 --- !u!54 &137848081872985916
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -746,9 +746,9 @@ NavMeshAgent:
   m_GameObject: {fileID: 5263719619247013645}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.1
+  m_Radius: 0.15
   m_Speed: 3.5
-  m_Acceleration: 6
+  m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -1270,7 +1270,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: d20402c03eeb8a449972f29c03857773, type: 3}
+  - {fileID: 2100000, guid: 1e8e258961845eb42b53886fae682b18, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

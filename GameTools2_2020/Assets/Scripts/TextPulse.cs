@@ -8,17 +8,6 @@ public class TextPulse : MonoBehaviour
     public AnimationCurve flashingCurve;
     private Coroutine flashCoroutine = null;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnDisable()
     {
         if (flashCoroutine != null)
@@ -32,7 +21,6 @@ public class TextPulse : MonoBehaviour
             StopCoroutine(flashCoroutine);
         }
         flashCoroutine = StartCoroutine(Flashing(0.5f));
-
     }
 
     IEnumerator Flashing(float period)

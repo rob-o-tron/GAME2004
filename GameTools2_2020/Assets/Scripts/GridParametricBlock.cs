@@ -72,7 +72,6 @@ namespace GRIDCITY
                     {
                         cityManager.SetSlot(x, y, z, true);
                     }
-
             int widthx = topRightFarIndX - bottomLeftNearIndX;
             int widthz = topRightFarIndZ - bottomLeftNearIndZ;
             int heighty = topRightFarIndY - bottomLeftNearIndY;
