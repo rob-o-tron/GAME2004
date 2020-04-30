@@ -29,6 +29,18 @@
 - Ferrone, Harrison (2019) Learning C# by Developing Games with Unity 2019, 4th Ed., Packt Publishing
 - Buckland, Mat (2005) Programming Game AI by Example, Worldware Publishing Inc
 
+# Week 10: GRID CITY
+
+![Class poster](gridcity.jpg)
+
+## Bringing it all together: completed mini-game 
+- demo game and Unity project using all techniques discussed so far
+- available in the "finalgame" branch of this repository
+
+## Lecture Videos
+- [Bringing it All Together: Part I](https://youtu.be/Bk7_XGZVsa0)
+- [Bringing it All Together: Part II](https://youtu.be/no3zBcFxqA8)
+
 # Week 9
 
 ## AI - Navigation. Learning Objectives:
