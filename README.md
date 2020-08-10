@@ -10,6 +10,7 @@
 - [Project Brief](https://drive.google.com/open?id=1-92K9HQPE5HhxVSYHcNwUxniUWW5Kp6v)
 
 ## Turtle Art results
+
 ![Class poster](Poster.jpg)
 - [Results image](PosterResults.jpg)
 - [Hi-res poster](Poster.png)
@@ -142,3 +143,10 @@ Open the 7_LabTest1_COMPLETED.unity scene.
 #### Game maths:
 - [Game maths tutorial](http://www.wildbunny.co.uk/blog/vector-maths-a-primer-for-games-programmers/)
 - [Unity Vector Cookbook](https://docs.unity3d.com/Manual/VectorCookbook.html)
+
+
+## Turtle Art results
+
+![XR Banner](Banner1.jpg)
+![Hi-res poster](Vertical1.png)
+
