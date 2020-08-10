@@ -147,6 +147,6 @@ Open the 7_LabTest1_COMPLETED.unity scene.
 
 ## Turtle Art results
 
-- [XR Banner](Banner1.png)
-- [Hi-res poster](Vertical1.png)
+![XR Banner](Banner1.png)
+![Hi-res poster](Vertical1.png)
 
