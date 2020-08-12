@@ -151,6 +151,7 @@ Open the 7_LabTest1_COMPLETED.unity scene.
 ![Hi-res poster](BannerBasic.png)
 ![Hi-res poster](BannerUATP.png)
 ![Hi-res poster](XRBOOTCAMP.png)
+![Hi-res poster](HANDS.png)
 ![Hi-res poster](HOLONAUTIC.png)
 ![Hi-res poster](viral_repairing.png)
 ![Hi-res poster](viral_pinching.png)
