@@ -149,4 +149,7 @@ Open the 7_LabTest1_COMPLETED.unity scene.
 
 ![XR Banner](Banner1.jpg)
 ![Hi-res poster](Vertical1.png)
-
+![XR Banner](BannerA.png)
+![Hi-res poster](Vertical.jpg)
+![Hi-res poster](Vertical2.jpg)
+![Hi-res poster](Certificate.png)
