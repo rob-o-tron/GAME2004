@@ -147,9 +147,14 @@ Open the 7_LabTest1_COMPLETED.unity scene.
 
 ## Turtle Art results
 
-![XR Banner](Banner1.jpg)
-![Hi-res poster](Vertical1.png)
-![XR Banner](BannerA.png)
-![Hi-res poster](Vertical.jpg)
-![Hi-res poster](Vertical2.jpg)
 ![Hi-res poster](Certificate.png)
+![Hi-res poster](BannerBasic.png)
+![Hi-res poster](BannerUATP.png)
+![Hi-res poster](XRBOOTCAMP.png)
+![Hi-res poster](HOLONAUTIC.png)
+![Hi-res poster](viral_repairing.png)
+![Hi-res poster](viral_pinching.png)
+![Hi-res poster](viral_interface.png)
+![Hi-res poster](viral_handui.png)
+![Hi-res poster](viral_contextual.png)
+![Hi-res poster](viral_teleporting.png)
